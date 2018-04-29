@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Royal Sanitaryware and Building Store</title>
+		<link rel="icon" type="image/png" href="/static/images/title3.png">
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+		<!-- html5shiv and respond-->
+		<script type="text/javascript" src="/static/js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="/static/js/respond.min.js"></script>
+		<!--<script type="text/javascript" src="jquery-3.0.0.min.js"></script>==>
+		<!--<script type="text/javascript" src="jquery-ui.min.js"></script>-->
+
+		<script type="text/javascript">
+
+					var check = function() {
+						if (document.getElementById('password').value ==
+							document.getElementById('confirm_password').value) {
+							document.getElementById('message').style.color = 'green';
+							document.getElementById('message').innerHTML = ' Password matching';
+							document.getElementById("Button").disabled = false;
+						} else {
+							document.getElementById('message').style.color = 'red';
+							document.getElementById('message').innerHTML = 'Password not matching';
+							document.getElementById("Button").disabled = true;
+						}
+					}
+
+				function is_checked()
+				{
+				 //var rules = document.getElementById('img2').checked;
+				 var eva = document.getElementById('eva');
+
+				 //if(rules)
+				 eva.innerHTML="<strong><p style='margin-top:20px;'>Want to order -</p><a href='1.6_order.html'><button class='btn btn-primary' name = 'log' value='1'>ORDER</button></a>" + "      " + "<a href='1.5_shopping.html'><button class='btn btn-primary' name='signin' value='2'>CANCEL</button></a></strong>";
+
+				 }
+				 function is_checked2()
+				{
+				 //var rules = document.getElementById('img2').checked;
+				 var eva = document.getElementById('eva2');
+
+				 //if(rules)
+				 eva2.innerHTML="<strong><p style='margin-top:20px;'>Want to order -</p><a href='1.6_order.html'><button class='btn btn-primary' name = 'log' value='1'>ORDER</button></a>" + "      " + "<a href='1.5_shopping.html'><button class='btn btn-primary' name='signin' value='2'>CANCEL</button></a></strong>";
+
+				 }
+
+
+
+
+				// Close the dropdown menu if the user clicks outside of it
+				window.onclick = function(event) {
+				  if (!event.target.matches('.dropbtn')) {
+
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					  var openDropdown = dropdowns[i];
+					  if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					  }
+					}
+				  }
+				}
+
+				function myFunction2() {
+					document.getElementById("myDropdown2").classList.toggle("show");
+				}
+
+				// Close the dropdown menu if the user clicks outside of it
+				window.onclick = function(event) {
+				  if (!event.target.matches('.dropbtn')) {
+
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					  var openDropdown = dropdowns[i];
+					  if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					  }
+					}
+				  }
+				}
+				function myFunction3() {
+					document.getElementById("myDropdown3").classList.toggle("show");
+				}
+
+
+				// Close the dropdown menu if the user clicks outside of it
+				window.onclick = function(event) {
+				  if (!event.target.matches('.dropbtn')) {
+
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					  var openDropdown = dropdowns[i];
+					  if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					  }
+					}
+				  }
+				}
+		</script>
+<style type="text/css">
+			*{
+
+			};
+			body{
+			background-image:url('/static/images/bcg2.jpg');
+			font-family:arial,sans-serif;
+			padding:3px;
+			}
+			#header{
+			width:100%;
+			height:96px;
+			background-color:#333;
+			box-shadow:-1px 9px 18px 3px #331;
+			margin:0px;
+			color:White;
+			}
+			.link1{
+			margin-left: 152px;
+			color:white;}
+			a{
+			color:white;
+			margin-left:5px;
+			margin-right:15px;
+
+			}
+			a:active{
+			color:black;
+			}
+			a:hover{
+			color:red;}
+			#my a{
+				color:white;
+				width:50px;
+				text-decoration: underline;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+
+			}
+
+			nav{
+				background-color: #36465d;
+				height:50px;
+				box-shadow:-1px 9px 18px 3px #36463d;
+
+
+			}
+
+			nav ul{
+				padding:10px 0px 5px 0px;
+				margin-top: 12px;
+			}
+			nav li a{
+				color:#ffffff;
+				text-decoration: none;
+				border:1px solid transparent;
+				border-radius:4px 4px 0 0
+
+			}
+			nav li a:hover,nav li a:active{
+				color:white;
+				width:50px;
+				text-decoration: underline;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+			nav li a:visited{
+				color:white;
+				width:50px;
+				text-decoration: none;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+
+			nav li{
+				display:inline;
+				margin-right: 0px;
+				height:50px;
+				font-size: 20px;
+			}
+			.img_:hover{
+				opacity:0.3;}
+
+			/* Dropdown Button */
+			.dropbtn {
+				background-color: #4CAF50;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
+
+			/* Dropdown button on hover & focus */
+			.dropbtn:hover, .dropbtn:focus {
+				background-color: #36463d;
+			}
+
+			/* The container - needed to position the dropdown content */
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			/* Links inside the dropdown */
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+			table, th, td {
+    border: 1px solid black;
+}
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {all: none;}
+
+			/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+			.show {display:block;}
+
+			.grow { transition: all 0.05s ease-in-out; }
+			.grow:hover { transform: scale(1.2); }
+
+
+			hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+	width:90%;
+}
+
+		</style>
+
+
+
+
+
+	</head>
+	<body>
+		{{l}}
+
+
+		<header style="width:1060px;border:2px solid black;margin:auto 135px;">
+
+		<div style="background-image:url('/static/images/bcg3.jpg');background-color:#585837;margin-bottom:-5px;box-shadow:-1px 9px 18px 3px #36463d;width=200px;height=100px;" class="container-fluid">
+			<!--<img src="images/iitbhulogo.png" class="img-responsive"style="margin-left:0px;display:inline;" class="img-responsive" alt="LOGO"/>
+			<img src="images/oxp.jpg" class="img-rounded" height="155px" width="320px" style="float:right;display:inline;"/>-->
+			<img src="/static/images/a2.jpg" class="img-rounded grow" height="130px" width="175px" style="float:left;display:inline;"/>
+			<div style="padding-left:100px;display:inline;font-style:bold;color:;">
+				<strong><h2 style="letter-spacing: 3px;font:sans-serif 20px bold;text-shadow: 3px 2px gray;">&nbsp;Royal Sanitary Ware and Building Material Store</h2></strong>
+			</div>
+
+		</div>
+
+
+
+		<!--*******navbar********-->
+		<nav>
+			<ul>
+				<li id="my"><a  href="/home" class="link1">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li><div class="dropdown" style="all:none;">
+				  <a href="#" onclick="myFunction()" class="dropbtn">Services &darr;</a>
+				  <div id="myDropdown" style="border:dashed 1px gray;border-radius:4px 4px 0 0;background-image:url('images/bc8.jpg');" class="dropdown-content">
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Products</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Employees</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Others</button>
+				  </div>
+				</div>
+			    </li>
+
+				<li><a href="/contact">Contact Us</a></li>
+				<li><div class="dropdown" style="all:none;">
+				  <a href="#" onclick="myFunction2()" class="dropbtn">Our Products &darr;</a>
+				  <div id="myDropdown2" style="border:dashed 1px gray;border-radius:4px 4px 0 0;background-image:url('images/bc8.jpg');" class="dropdown-content">
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Sanitary Ware Products</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Building Materials</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Others</button>
+				  </div>
+				</div>
+			    </li>
+
+
+			</ul>
+		</nav>
+
+	</header>
+
+	<section style="background-image:url('/static/images/bcg11.jpg');border:solid 2px gray;border-radius:5px;height:850px;width:1060px;margin:10px 135px;">
+			<h2 style="color:grey;font-size:30px;padding-bottom:0px;margin-left:50px;"><code>User's Profile</code></h2>
+			<hr>
+			<!--<div style="float:left;margin-left:50px;margin-top:10px;border:2px solid black;width:150px;height:140px;display:inline;">
+				<img  src="images2/defppic.png" style="width:146px;height:136px;" alt="Profile_Pic" />-
+			</div>-->
+
+				<div style="display:inline;float:left;margin-left:40px;margin-top:50px;padding:0px;">
+					<nav class="navbar navbar-primary">
+						  <div class="container-fluid">
+
+								<ul class="nav navbar-nav">
+								  <li class="active" ><button onclick="location.href='/login/profile'" name='prof' class="btn btn-success navbar-btn" style="margin-left:2px;margin:0px;" >Profile</button></li>
+								  <li><button class="btn btn-primary navbar-btn" style="margin:0px;margin-left:2px;" href="#">Edit Profile</button></li>
+								  <li><button class="btn btn-success navbar-btn" style="margin-left:2px;margin:0px;" onclick="location.href='/login/profile/history' ">History</button></li>
+								</ul>
+						  </div>
+					</nav>
+					<div style="border:2px none solid;width:700px;height:300px;">
+						<h4 style="color:grey;padding-bottom:0px;margin-left:35px;"><code>Update Profile</code></h4>
+						<hr>
+						<b>
+							<form action="/home" method="POST">
+								<label for="name" style="position:relative;left:0px;">Cust_ID</label><br/>
+								<input type="text" id="custid" name="custid" value={{l[0][0]}} readonly />
+										<br/><br/>
+								<label for="name" style="position:relative;left:0px;">NAME</label><br/>
+								<input type="text" id="name" name="name" placeholder="Name" value={{l[0][1]}} />
+										<br/><br/>
+
+								<label for="email">E-mail</label><br />
+								<input type="email" id="email" name="email" placeholder="Username@hotmail.com" value={{l[0][2]}} maxlength="80" size="40" readonly />
+												<br/><br/>
+								<label for="password">Password</label><br />
+								<input type="password" id="password" name="password" onkeyup='check();' placeholder="password" value={{l[0][3]}} maxlength="8" size="30"/>
+												<br/><br/>
+								<label for="confirm_password">Confirm Password</label><br />
+								<input type="password" id="confirm_password" name="confirm_password" onkeyup='check();' placeholder="confirm_password" value={{l[0][3]}} maxlength="8" size="30"/>
+																<br/><span id='message'></span><br/>
+								<label for="contact" >Contact:</label><br />
+								<input type="text" id="contact" name="contact" value={{l[0][4]}} placeholder="+91(0)" maxlength="14"/><br /><br />
+
+								<label for="occ">Occupation:</label><br />
+								<input type="text" id="occ" name="occ" placeholder="Occupation" value={{l[0][5]}} />
+
+												<br /><br />
+
+								<label for="addr">Address:</label><br />
+								<input type="addr" id="addr" name="addr" placeholder="Address" value={{l[0][6]}} />
+
+												<br /><br />
+												<br/><br/>
+
+								<input type="submit" class="btn btn-primary" name="update" id="Button"  value="SUBMIT"/>
+								<input type="reset" class="btn btn-info" name="reset" value="RESET"/>
+							</form>
+
+						</b>
+					<div>
+
+				<div>
+
+	</section>
+
+
+
+
+
+		<!--*********script************-->
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+	</body>
+</html>

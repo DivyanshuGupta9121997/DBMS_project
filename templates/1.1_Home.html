@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="/static/images/title3.png">
+		<title> Royal Sanitaryware and Building Store
+		</title>
+
+<!--{{url_for('static',filename='.css') }}-->
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="index.css" />-->
+		<!--<link rel="stylesheet" type="text/css" href="index2.css"/>-->
+		<link rel="stylesheet" href="/static/css/header-user-dropdown.css"/>
+		<!-- html5shiv and respond-->
+		<script type="text/javascript" src="/static/js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="/static/js/respond.min.js"></script>
+									<!--<script type="text/javascript" src="jquery-3.0.0.min.js"></script>-->
+									<!--<script type="text/javascript" src="jquery-ui.min.js"></script>-->
+
+		<style type="text/css">
+			*{
+			};
+
+			body{
+			background-image:url('/static/images/bcg2.jpg');
+			font-family:arial,sans-serif;
+			padding:3px;
+			}
+			#header{
+			width:100%;
+			height:96px;
+			background-color:#333;
+			box-shadow:-1px 9px 18px 3px #331;
+			margin:0px;
+			color:White;
+			}
+			.link1{
+			margin-left: 152px;
+			color:white;}
+			a{
+			color:white;
+			margin-left:5px;
+			margin-right:15px;
+
+			}
+			a:active{
+			color:black;
+			}
+			a:hover{
+			color:red;}
+			#my a{
+				color:white;
+				width:50px;
+				text-decoration: underline;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+			th, td {
+    		padding-left: 45px;
+				padding-right: 45px;
+			}
+			nav{
+				background-color: #36465d;
+				height:50px;
+				box-shadow:-1px 9px 18px 3px #36463d;
+
+			}
+
+			nav ul{
+				padding:10px 0px 5px 0px;
+				margin-top: 12px;
+			}
+			nav li a{
+				color:#ffffff;
+				text-decoration: none;
+				border:1px solid transparent;
+				border-radius:4px 4px 0 0
+
+			}
+			nav li a:hover,nav li a:active{
+				color:white;
+				width:50px;
+				text-decoration: underline;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+			nav li a:visited{
+				color:white;
+				width:50px;
+				text-decoration: none;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+
+			nav li{
+				display:inline;
+				margin-right: 0px;
+				height:50px;
+				font-size: 20px;
+			}
+			.img_:hover{
+				opacity:0.3;}
+
+			/* Dropdown Button */
+			.dropbtn {
+				background-color: #4CAF50;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
+
+			/* Dropdown button on hover & focus */
+			.dropbtn:hover, .dropbtn:focus {
+				background-color: #36463d;
+			}
+
+			/* The container - needed to position the dropdown content */
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			/* Links inside the dropdown */
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {all: none;}
+
+			/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+			.show {display:block;}
+
+			.grow { transition: all 0.05s ease-in-out; }
+			.grow:hover { transform: scale(1.1);}
+
+			.parallax {
+				/* The image used */
+				background-image: url("/static/images/aa.jpg");
+
+				/* Set a specific height */
+				min-height: 250px;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+		</style>
+		<script type="text/javascript">
+				/*function myMap() {
+					var mapProp= {
+						center:new google.maps.LatLng(25.25618515,82.),
+						zoom:5,
+					};
+					var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+					}*/
+
+      function myMap() {
+        var uluru = {lat: 25.255958, lng: 82.979481};
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+
+
+
+					/* When the user clicks on the button,
+		toggle between hiding and showing the dropdown content */
+				function myFunction() {
+					document.getElementById("myDropdown").classList.toggle("show");
+				}
+
+
+				// Close the dropdown menu if the user clicks outside of it
+				window.onclick = function(event) {
+				 	if (!event.target.matches('.dropbtn')) {
+
+							var dropdowns = document.getElementsByClassName("dropdown-content");
+							var i;
+							for (i = 0; i < dropdowns.length; i++) {
+					  		var openDropdown = dropdowns[i];
+					  		if (openDropdown.classList.contains('show')) {
+										openDropdown.classList.remove('show');
+					  		}
+							}
+				 	}
+				}
+
+				function myFunction2() {
+					document.getElementById("myDropdown2").classList.toggle("show");
+				}
+
+				// Close the dropdown menu if the user clicks outside of it
+				window.onclick = function(event) {
+				  if (!event.target.matches('.dropbtn')) {
+
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++) {
+					  	var openDropdown = dropdowns[i];
+					  	if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+					  	}
+						}
+				  }
+				}
+				function myFunction3() {
+					document.getElementById("myDropdown3").classList.toggle("show");
+				}
+
+
+				// Close the dropdown menu if the user clicks outside of it
+				window.onclick = function(event) {
+				  if (!event.target.matches('.dropbtn')) {
+
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					  var openDropdown = dropdowns[i];
+					  if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					  }
+					}
+				  }
+				}
+
+			var image_tracker='f';
+			function change(){
+				var image=document.getElementById('show');
+				if(image_tracker=='f'){
+					image.src="/static/images/a1.jpg";
+					image_tracker='s';
+				}
+				else if(image_tracker=='s'){
+					image.src="/static/images/a2_.jpg";
+					image_tracker='t';
+				}
+				else if(image_tracker=='t'){
+					image.src="/static/images/a3.jpg";
+					image_tracker='4';
+				}
+				else if(image_tracker=='4'){
+					image.src="/static/images/a4.jpg";
+					image_tracker='5';
+				}
+				else if(image_tracker=='5'){
+					image.src="/static/images/a5.jpg";
+					image_tracker='f';
+				}
+				/*else if(image_tracker=='6'){
+					image.src="images/111.jpg";
+					image_tracker='f';
+				}*/
+
+			}
+			setInterval('change()',2000);
+		</script>
+	</head>
+
+	<body id="body">
+
+	<header style="width:1060px;border:2px solid red;margin:auto 135px;">
+
+		<div style="background-image:url('/static/images/bcg3.jpg');background-color:#585837;margin-bottom:-5px;box-shadow:-1px 9px 18px 3px #36463d;width=200px;height=100px;" class="container-fluid">
+			<img src="/static/images/ppic2.jpg" class="img-rounded grow" height="130px" width="175px" style="float:left;display:inline;border:black solid 1px;"/>
+			<div style="padding-left:100px;display:inline;font-style:bold;color:;">
+				<strong><h2 style="letter-spacing: 3px;font:sans-serif 20px bold;text-shadow: 3px 2px gray;">&nbsp;Royal Sanitary Ware and Building Material Store</h2></strong>
+			</div>
+		</div>
+
+
+		<!--*******navbar********-->
+		<nav>
+			<ul>
+				<li id="my"><a href="/home" class="link1">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li>
+					<div class="dropdown" style="all:none;">
+					  <a href="/services" onclick="myFunction()" class="dropbtn">Services &darr;</a>
+					  <div id="myDropdown" style="border:dashed 1px gray;border-radius:4px 4px 0 0;background-image:url('/static/images/bc8.jpg');" class="dropdown-content">
+						<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Products</button><br/>
+						<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Employees</button><br/>
+						<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Others</button>
+					  </div>
+					</div>
+			  </li>
+
+				<li><a href="/contact">Contact Us</a></li>
+				<li><div class="dropdown" style="all:none;">
+				  <a href="#" onclick="myFunction2()" class="dropbtn">Our Products &darr;</a>
+				  <div id="myDropdown2" style="border:dashed 1px gray;border-radius:4px 4px 0 0;background-image:url('/static/images/bc8.jpg');" class="dropdown-content">
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Sanitary Ware Products</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Building Materials</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Others</button>
+				  </div>
+				</div>
+			    </li>
+
+				<li style="margin-left:200px;">
+					<div class="dropdown" style="all:none;">
+				  	<a href="#" onclick="myFunction3()" class="dropbtn">SIGN IN &darr;</a>
+				  	<div id="myDropdown3" style="border:dashed 1px gray;border-radius:4px 4px 0 0;background-image:url('images/bc8.jpg');" class="dropdown-content">
+							<button href="#" class="btn btn-success" style="width:200px;color:black;text-decoration:underline;" onclick="location.href='/instruction'">Register</button><br/>
+							<button href="#" class="btn btn-success" style="width:200px;color:black;text-decoration:underline;" onclick="location.href='/login'">Login</button><br/>
+							<button href="#" class="btn btn-success" style="width:200px;color:black;text-decoration:underline;" onclick="location.href='/admin_login'">Admin Login</button><br/>
+				  	</div>
+					</div>
+			  </li>
+
+			</ul>
+		</nav>
+
+	</header>
+
+	<!--*******navbar close**********-->
+<div class="container" style="background-image:url('/static/images/bcg1.jpg');width=960px;border:2px black solid;border-radius:5px;margin-top:8px;">
+
+	<div class="row">
+		<div class="col-xs-6" style="border:solid 0.5px;width:800px;height:426px;background-color:white;margin-left:0px;margin-top:20px;
+				margin-bottom:20px;">
+			<div style="width:780px;height:406px;margin-left:-5px;" id="myCarousel" class="carousel slide" data-ride="carousel">
+				<img src="/static/images/a1.jpg" id="show" style="margin-top:10px;border:solid 0.5px" height="406px" width="780px"/>
+				<a style="margin-left:0px;margin-top:10px;height:406px;" class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a style="margin-top:10px;height:406px;margin-right:0px;" class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<!--<div class="col-xs-2.8" id="blue" style="float:left;border:solid 0.0px;height:426px;margin-top:25px;margin-bottom:20px;">
+		</div>-->
+
+		<div class="col-md-3" style="background-image:url('/static/images/bcg.jpg');border:solid 1px black;margin-top:20px;margin-left:50px;height:400px;">
+							<form>
+                            <input type="text" placeholder="Search.." style="width:150px;" />
+                            <button class="btn btn-primary" value="Search">Search</button>
+							</form>
+							<div id="googleMap" class="grow" style="border:solid black 1px;width:100%;height:200px;margin-top:10px;"></div>
+
+							<div class="grow" style="border:solid 1px black;margin-top:5px;padding:15px;">
+								 &nbsp; <strong>&#x260F; &nbsp;(+91)-9839044137<br/>
+								 &nbsp; &#x26EA; Karmanbir,
+								 Susuwahi,Varanasi (221011), Near bank of baroda ATM.</strong>
+							</div>
+		</div>
+
+
+	</div>
+
+			<!--*******abstract**********-->
+
+			<div class="col-xs-5" id="abstract" style="background-image:url('/static/images/bcg.jpg');border:1px black dashed;background-color:white;margin-left:0px;">
+				<h2 style="margin-left:10px;">Abstract</h2>
+				<div style="line-height:25px;">
+					<p style="padding:2px;margin:10px;"><span style="font-size:20px;">&nbsp;&nbsp;R</span>oyal Sanitary & Building Material in Varanasi is an enterprise which basically sells sanitaryware and bathroom fittings.
+Dealers of sanitary ware and bathroom fittings, Royal Sanitary & Building Material near Susuwahi, Varanasi is one of the well-known establishments in the city. Established in the year 2015, in the due course of time, this enterprise has become a name synonymous with the beautification of bathrooms. It makes conscientious strides to offer top-notch services and best-in-class products to their client base each time. Customers get to choose from a diverse choice in sanitary ware and stone bowls, ceramic wall and floor tiles, vitrified tiles, designer faucets and showers, wooden flooring, modular kitchens, wellness products, CPVC pipes and aqua-lights. The stylish designs and quality products have earned immense recognition with their base of clients, that includes hoteliers, builders, architects, designers, homemakers as well as working professionals. Locate this establishment with ease at on the karmanbir. It is conveniently located karmanbir. Undoubtedly it is one of the best sanitaryware dealers in Susuwahi, Varanasi.</p>
+				</div>
+			</div>
+			<div class="col-xs-7" style="background-image:url('/static/images/bcg.jpg');width=50px;height=1000px;border:1px black dashed;">
+					<div class="col-xs-5" style="height=500px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+						<strong>&nbsp; &#x261B; &nbsp; Building Materials &nbsp;</strong>
+						<img src="/static/images/bm2.jpg" class="img-responsive img-rounded grow" width="200px" height="250px" style="border:solid 1px black;margin-left:15px;margin-top:20px;"/>
+
+						<span style="font-size:20px;">&nbsp;&nbsp;R</span>oyal Building Material store provide quality products and earned recognition with their base of clients.
+
+					</div>
+					<div class="col-xs-5" style="height=500px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+						<strong>&nbsp; &#x261B; &nbsp; Sanitary Ware &nbsp;</strong>
+						<img src="/static/images/sw.jpg" class="img-responsive img-rounded grow" width="200px" height="250px" style="border:solid 1px black;margin-left:15px;margin-top:20px;"/>
+
+						<span style="font-size:20px;">&nbsp;&nbsp;R</span>oyal Sanitary Ware store provide quality products and earned recognition with their base of clients.
+
+					</div>
+
+			</div>
+
+
+				<div class="row" style="background-image:url('/static/images/bcg11.jpg');clear:left;border:red solid 2px;color:black;text-align:center;">
+					<div class="parallax">
+						 <div class="col-lg-12">
+							<h2>WE OFFER A COMPLETE LINE OF BUILDING MATERIALS.</h2>
+							<h2>CALL US TODAY!  954-327-3465</h2> <h2>Free Quote! Sign Up Now! <a href="/signup">click here</a></h2>
+							<p style="font-size:16px;">We stock a wide range of sanitary ware and building materials at all of our facilities which enables you to get the product you need when you want it.</p>
+							<hr>
+						</div>
+					</div>
+
+					<div style="height:800px;">
+						<h2 style="text-align:center;">PRODUCT RANGE</h2>
+
+
+
+						<div class="col-xs-3" style="height:320px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+							<strong>&nbsp; &#x261B; &nbsp; Ceramic Walls &nbsp;</strong>
+							<img src="/static/images2/cerwall.jpg" class="img-responsive img-rounded grow" width="250px" height="250px" style="border:solid 1px black;margin-left:3px;margin-top:20px;height:250px;"/>
+
+						</div>
+
+						<div class="col-xs-3" style="height:320px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+							<strong>&nbsp; &#x261B; &nbsp; CVC pipes &nbsp;</strong>
+							<img src="/static/images2/cvc.jpg" class="img-responsive img-rounded grow" width="250px" height="250px" style="border:solid 1px black;margin-left:3px;margin-top:20px;height:250px;"/>
+
+						</div>
+
+						<div class="col-xs-3" style="height:320px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+							<strong>&nbsp; &#x261B; &nbsp; Wooden Flooring &nbsp;</strong>
+							<img src="/static/images2/wooden.jpg" class="img-responsive img-rounded grow" width="250px" height="250px" style="border:solid 1px black;margin-left:3px;margin-top:20px;height:250px;"/>
+
+						</div>
+						<div class="col-xs-3" style="height:320px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+							<strong>&nbsp; &#x261B; &nbsp; Aqua Lights &nbsp;</strong>
+							<img src="/static/images2/aqua.jpg" class="img-responsive img-rounded grow" width="250px" height="250px" style="border:solid 1px black;margin-left:3px;margin-top:20px;height:250px;"/>
+
+						</div>
+
+						<div class="col-xs-3" style="height:320px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+							<strong>&nbsp; &#x261B; &nbsp; Designer faucets and showers &nbsp;</strong>
+							<img src="/static/images2/202.jpg" class="img-responsive img-rounded grow" width="250px" height="250px" style="border:solid 1px black;margin-left:3px;margin-top:20px;height:250px;"/>
+
+						</div>
+
+						<div class="col-xs-3" style="height:320px;margin:5px 10px;margin-bottom:10px;padding-bottom:10px;border-radius: 15px;border:1px black dashed;">
+							<strong>&nbsp; &#x261B; &nbsp; Sanitaryware and CP fitting &nbsp;</strong>
+							<img src="/static/images2/201.jpg" class="img-responsive img-rounded grow" width="250px" height="250px" style="border:solid 1px black;margin-left:3px;margin-top:20px;height:250px;"/>
+
+						</div>
+
+
+
+
+					</div>
+
+
+
+            <!-- /.row -->
+				</div>
+
+
+
+		</div>
+
+
+	<footer class="container" style="width:960px;background-image:url('/static/images/bcg2.jpg');border:2px solid green;margin:auto 135px;">
+			<br/>
+			<strong>
+
+
+			<table>
+				<tr>
+					<th>&nbsp; &#x261B; &nbsp;<u>Enterprise-</u></th>
+					<th>&nbsp; &#x261B; &nbsp;<u>Our Products-</u></th>
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Home</a></td>
+					<td>Sanitary Ware Items-</td>
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">About Us</a></td>
+					<td>Building Materials-</td>
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Services</a></td>
+
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Contact Us</a></td>
+
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Our Products</a></td>
+				</tr>
+			</table>
+
+			<hr>
+			<p align="center">Terms of Service</p>
+			<p align="center">&copy; 2015 All Rights Reserved</p>
+
+			</strong>
+	</footer>
+		<!--*********script************-->
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8FAGHLQtciNp42eXfe8PZwWTILnLVcWg&callback=myMap"></script>
+
+
+
+	</body>
+</html>

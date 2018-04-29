@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>MyFlaskapp</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+      {% include 'includes/_messages.html' %}
+      <!-->   begin    -->
+        {% for key,value in res.iteritems() %}
+            <h1>{{key}}</h1> : <h3>{{value}}</h3>
+        {%endfor%}
+
+
+
+
+    </div>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

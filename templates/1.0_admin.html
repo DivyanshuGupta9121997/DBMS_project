@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="/static/images/title3.png">
+		<title> Royal Sanitaryware and Building Store
+		</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="/static/css/header-user-dropdown.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="/static/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/js/html5shiv.min.js"></script>
+		<script type="text/javascript" src="/static/js/respond.min.js"></script>
+
+		<style type="text/css">
+			*{
+			};
+
+			body{
+			background-image:url('/static/images/bcg2.jpg');
+			font-family:arial,sans-serif;
+			padding:3px;
+			}
+			#header{
+			width:100%;
+			height:96px;
+			background-color:#333;
+			box-shadow:-1px 9px 18px 3px #331;
+			margin:0px;
+			color:White;
+			}
+			.link1{
+			margin-left: 152px;
+			color:white;}
+			a{
+			color:white;
+			margin-left:5px;
+			margin-right:15px;
+
+			}
+			a:active{
+			color:black;
+			}
+			a:hover{
+			color:green;}
+			#my a{
+				color:white;
+				width:50px;
+				text-decoration: underline;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+			th, td {
+    		padding-left: 20px;
+				padding-right: 20px;
+			}
+			table.no-spacing {
+			  border-spacing:0; /* Removes the cell spacing via CSS */
+			  border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+			}
+			nav{
+				background-color: #36465d;
+				height:50px;
+				box-shadow:-1px 9px 18px 3px #36463d;
+
+			}
+
+			nav ul{
+				padding:10px 0px 5px 0px;
+				margin-top: 12px;
+			}
+			nav li a{
+				color:#ffffff;
+				text-decoration: none;
+				border:1px solid transparent;
+				border-radius:4px 4px 0 0
+
+			}
+			nav li a:hover,nav li a:active{
+				color:white;
+				width:50px;
+				text-decoration: underline;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+			nav li a:visited{
+				color:white;
+				width:50px;
+				text-decoration: none;
+				box-shadow: inset 0px 0px 8px #0f0f3a;
+				background-color: #36463d;
+				padding-left: 2px;
+				padding-top: 11px;
+				padding-right:1px;
+				padding-bottom:15px;
+				margin-top:20px;
+			}
+
+			nav li{
+				display:inline;
+				margin-right: 0px;
+				height:50px;
+				font-size: 20px;
+			}
+			.img_:hover{
+				opacity:0.3;}
+
+			/* Dropdown Button */
+			.dropbtn {
+				background-color: #4CAF50;
+				color: white;
+				padding: 16px;
+				font-size: 16px;
+				border: none;
+				cursor: pointer;
+			}
+
+			/* Dropdown button on hover & focus */
+			.dropbtn:hover, .dropbtn:focus {
+				background-color: #36463d;
+			}
+
+			/* The container - needed to position the dropdown content */
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+				z-index: 1;
+			}
+
+			/* Links inside the dropdown */
+			.dropdown-content a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+			}
+
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {all: none;}
+
+			/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+			.show {display:block;}
+
+			.grow { transition: all 0.05s ease-in-out; }
+			.grow:hover { transform: scale(1.1);}
+
+			.parallax {
+				/* The image used */
+				background-image: url("/static/images/aa.jpg");
+
+				/* Set a specific height */
+				min-height: 250px;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+		</style>
+		<script type="text/javascript">
+			/*{%if li%}:
+				{%for i in li%}
+					var a=i[1]
+					document.getElementById(a).disabled = true;
+				{%endfor%}
+			{%endif%}*/
+
+
+			function callf(){
+				alert("Admin has been logged out");
+			}
+
+      function myMap() {
+        var uluru = {lat: 25.255958, lng: 82.979481};
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+
+      function myFunction() {
+					document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+      window.onclick = function(event) {
+				 if (!event.target.matches('.dropbtn')) {
+
+							var dropdowns = document.getElementsByClassName("dropdown-content");
+							var i;
+							for (i = 0; i < dropdowns.length; i++) {
+					  		var openDropdown = dropdowns[i];
+					  		if (openDropdown.classList.contains('show')) {
+										openDropdown.classList.remove('show');
+					  		}
+							}
+				 	}
+				}
+
+			function myFunction2() {
+				document.getElementById("myDropdown2").classList.toggle("show");
+			}
+
+			window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					     var openDropdown = dropdowns[i];
+					  	 if (openDropdown.classList.contains('show')) {
+								openDropdown.classList.remove('show');
+					  	}
+						}
+				  }
+				}
+				function myFunction3() {
+					document.getElementById("myDropdown3").classList.toggle("show");
+				}
+
+        window.onclick = function(event) {
+				  if (!event.target.matches('.dropbtn')) {
+
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					  var openDropdown = dropdowns[i];
+					  if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					  }
+					}
+				  }
+				}
+
+			</script>
+	</head>
+
+	<body id="body">
+		{{task1}}
+		{{task2}}
+	<header style="width:1160px;border:2px solid red;margin:auto 75px;">
+
+		<div class="container" style="background-image:url('/static/images/bcg3.jpg');background-color:#585837;
+    margin-bottom:-5px;box-shadow:-1px 9px 18px 3px #36463d;width:1160px;height=100px;" class="container-fluid">
+			<img src="/static/images/ppic2.jpg" class="img-rounded grow" height="130px" width="175px" style="float:left;display:inline;border:black solid 1px;"/>
+			<div style="padding-left:100px;display:inline;font-style:bold;color:;">
+				<strong><h2 style="letter-spacing: 3px;font:sans-serif 20px bold;text-shadow: 3px 2px gray;">&nbsp;Royal Sanitary Ware and Building Material Store</h2></strong>
+			</div>
+		</div>
+
+
+		<!--*******navbar********-->
+		<nav>
+			<ul>
+				<li id="my"><a href="/home" class="link1">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li>
+					<div class="dropdown" style="all:none;">
+					  <a href="/services" onclick="myFunction()" class="dropbtn">Services &darr;</a>
+					  <div id="myDropdown" style="border:dashed 1px gray;border-radius:4px 4px 0 0;background-image:url('/static/images/bc8.jpg');" class="dropdown-content">
+						<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Products</button><br/>
+						<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Employees</button><br/>
+						<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Others</button>
+					  </div>
+					</div>
+			  </li>
+
+				<li><a href="/contact">Contact Us</a></li>
+				<li><div class="dropdown" style="all:none;">
+				  <a href="#" onclick="myFunction2()" class="dropbtn">Our Products &darr;</a>
+				  <div id="myDropdown2" style="border:dashed 1px gray;border-radius:4px 4px 0 0;background-image:url('/static/images/bc8.jpg');" class="dropdown-content">
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Sanitary Ware Products</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Building Materials</button><br/>
+					<button href="#" class="btn btn-default" style="width:200px;color:black;text-decoration:underline;">Others</button>
+				  </div>
+				</div>
+			    </li>
+
+				<li style="margin-left:200px;float:right;">
+					<form action="/home" method='post'>
+							<input type="submit" class="btn btn-primary" onclick='callf()' name='adminlogout' id='logout' value="Log_out"/>
+					</form>
+			  </li>
+
+			</ul>
+		</nav>
+
+	</header>
+
+	<!--*******navbar close**********-->
+<section>
+  <h1 align="center">ADMIN PAGE</h1>
+  <div class="container">
+
+    <p style="font-size:20px;">Click on the button for subsequent operations - </p>
+
+    <div class="panel-group" id="accordion">
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading" style="height:60px;">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" >
+                <span style="font-size:30px;">Order with order_status 0 in last week</span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse out">
+	              <div class="panel-body"><strong>
+	        			<table border="1">
+	        				<tr style="font-size:15px;padding:0px;">
+	        					<th>&#x261B; <u>Order_ID</u></th>
+										<th> &#x261B;<u>Cust_ID</u></th>
+										<th> &#x261B; <u>Order_status</u></th>
+										<th> &#x261B; <u>Order_Date</u></th>
+										<th> &#x261B; <u>Billingname</u></th>
+	        					<th> &#x261B; <u>order_type</u></th>
+	                  <th>  &#x261B; <u>Delivery Status</u></th>
+	        				</tr>
+									{% for item in task1 %}
+											<tr>
+												<td> {{item[0]}} </td>
+												<td>  {{item[1]}} </td>
+												{%if item[2]==1%}
+												<td style="color:green">  Success </td>
+												{% else%}
+												<td style="color:red">  No Payment </td>
+												{% endif%}
+												<td>  {{item[3]}} </td>
+												<td>  {{item[4]}} </td>
+												<td>  {{item[5]}} </td>
+												{%if item[6]==1%}
+												<td style="color:green">  Success </td>
+												{% else%}
+												<td style="color:red">  Pending </td>
+												{% endif%}
+											</tr>
+									{%endfor%}
+
+	        			</table>
+	        			</strong></div>
+            </div>
+      </div>
+
+			<div class="panel panel-default">
+					<div class="panel-heading" style="height:60px;">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapse01" >
+							<span style="font-size:30px;">Order with order_status 1 (Delivery Status 0) in last week</span>
+							</a>
+						</h4>
+					</div>
+					<div id="collapse01" class="panel-collapse collapse out">
+							<div class="panel-body"><strong>
+							<table border="1">
+								<tr style="font-size:15px;padding:0px;">
+									<th>&#x261B; <u>Order_ID</u></th>
+									<th> &#x261B;<u>Cust_ID</u></th>
+									<th> &#x261B; <u>Order_status</u></th>
+									<th> &#x261B; <u>Order_Date</u></th>
+									<th> &#x261B; <u>Billingname</u></th>
+									<th> &#x261B; <u>order_type</u></th>
+									<th>  &#x261B; <u>Delivery Status</u></th>
+								</tr>
+								{% for item in task2 %}
+										<tr>
+											<td> {{item[0]}} </td>
+											<td>  {{item[1]}} </td>
+											{%if item[2]==1%}
+											<td style="color:green">  Success </td>
+											{% else%}
+											<td style="color:red">  No Payment </td>
+											{% endif%}
+											<td>  {{item[3]}} </td>
+											<td>  {{item[4]}} </td>
+											<td>  {{item[5]}} </td>
+											{%if item[6]==1%}
+											<td style="color:green">  Success </td>
+											{% else%}
+											<td style="color:red">  Pending </td>
+											{% endif%}
+										</tr>
+								{%endfor%}
+
+							</table>
+							</strong></div>
+					</div>
+		</div>
+
+
+
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading" style="height:60px;">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" >
+                <span style="font-size:30px;">Delivery Status</span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse out">
+              <div class="panel-body"><strong>
+
+
+        			<table style="border:1px solid black; ">
+        				<tr>
+        					<th>&nbsp; &#x261B; &nbsp;<u>Service_ID</u></th>
+        					<th>&nbsp; &#x261B; &nbsp;<u>Employee_ID</u></th>
+                  <th>&nbsp; &#x261B; &nbsp;<u>Expected Delivery Date</u></th>
+									<th>&nbsp; &#x261B; &nbsp;<u>Order_ID</u></th>
+                  <th>&nbsp; &#x261B; &nbsp;<u>Delivery Status</u></th>
+        				</tr>
+								{% for item in task3 %}
+        				<tr>
+                  <th><u>{{item[0]}}</u></th>
+        					<th><u>{{item[1]}}</u></th>
+                  <th><u>{{item[2]}}</u></th>
+									<th><u>{{item[3]}}</u></th>
+									<th><u>{{item[4]}}</u></th>
+        				</tr>
+								{%endfor%}
+        			</table>
+        			</strong></div>
+            </div>
+          </div>
+
+
+
+					<div class="panel panel-default">
+            <div class="panel-heading" style="height:60px;">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse23" >
+                <span style="font-size:30px;">Employee Details</span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse23" class="panel-collapse collapse out">
+              <div class="panel-body"><strong>
+
+
+        			<table style="border:1px solid black; ">
+        				<tr>
+        					<th>&nbsp; &#x261B; &nbsp;<u>Emp_ID</u></th>
+        					<th>&nbsp; &#x261B; &nbsp;<u>Name</u></th>
+                  <th>&nbsp; &#x261B; &nbsp;<u>Email</u></th>
+									<th>&nbsp; &#x261B; &nbsp;<u>Contact_No</u></th>
+                  <th>&nbsp; &#x261B; &nbsp;<u>Address</u></th>
+									<th>&nbsp; &#x261B; &nbsp;<u>Salary</u></th>
+									<th>&nbsp; &#x261B; &nbsp;<u>Current_Avail</u></th>
+									<th>&nbsp; &#x261B; &nbsp;<u>Date_of_hiring</u></th>
+        				</tr>
+								{% for item in task4 %}
+        				<tr>
+                  <th><u>{{item[0]}}</u></th>
+        					<th><u>{{item[1]}}</u></th>
+                  <th><u>{{item[2]}}</u></th>
+									<th><u>{{item[3]}}</u></th>
+									<th><u>{{item[4]}}</u></th>
+									<th><u>{{item[5]}}</u></th>
+									<th><u>{{item[6]}}</u></th>
+									<th><u>{{item[7]}}</u></th>
+        				</tr>
+								{%endfor%}
+        			</table>
+        			</strong></div>
+
+							<li><button class="btn btn-success" data-toggle="collapse" data-target="#demo31">Update curr_avail_to_1</button>
+							<div id="demo31" class="collapse">
+										<form id="register-form" action="/admin" method="POST" role="form" >
+												<div class="form-group">
+													<input type="text" name="empid" id="empid" tabindex="1" class="form-control" placeholder="Emp_id" value="">
+												</div>
+												<div class="form-group">
+													<input type="text" name="curr1" id="curr1" tabindex="1" class="form-control" placeholder="1" value="1" readonly />
+												</div>
+												<div class="form-group">
+												<div class="row">
+													<div class="col-sm-6 col-sm-offset-3">
+														<input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit4_1" id="register-submit4_1" tabindex="4" class="form-control btn btn-register" value="Add Now">
+													</div>
+												</div>
+											</div>
+										</form>
+							</div></li>
+
+            </div>
+          </div>
+
+					<div class="panel panel-default">
+            <div class="panel-heading" style="height:60px;">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse24" >
+                <span style="font-size:30px;">Vehicle Details</span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse24" class="panel-collapse collapse out">
+              <div class="panel-body"><strong>
+
+
+        			<table style="border:1px solid black; ">
+        				<tr>
+        					<th>&nbsp; &#x261B; &nbsp;<u>Vehicle_ID</u></th>
+        					<th>&nbsp; &#x261B; &nbsp;<u>Registration NO.</u></th>
+                  <th>&nbsp; &#x261B; &nbsp;<u>NumberPlate Info</u></th>
+									<th>&nbsp; &#x261B; &nbsp;<u>Current_avail</u></th>
+        				</tr>
+								{% for item in task5 %}
+        				<tr>
+                  <th><u>{{item[0]}}</u></th>
+        					<th><u>{{item[1]}}</u></th>
+                  <th><u>{{item[2]}}</u></th>
+									<th><u>{{item[3]}}</u></th>
+        				</tr>
+								{%endfor%}
+        			</table>
+        			</strong></div>
+
+							<li><button class="btn btn-success" data-toggle="collapse" data-target="#demo32">Update curr_avail_to_1</button>
+							<div id="demo32" class="collapse">
+										<form id="register-form" action="/admin" method="POST" role="form" >
+												<div class="form-group">
+													<input type="text" name="vid" id="vid" tabindex="1" class="form-control" placeholder="Veh_ID" value="">
+												</div>
+												<div class="form-group">
+													<input type="text" name="curr2" id="curr2" tabindex="1" class="form-control" placeholder="1" value="1" readonly />
+												</div>
+												<div class="form-group">
+												<div class="row">
+													<div class="col-sm-6 col-sm-offset-3">
+														<input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit4_2" id="register-submit4_2" tabindex="4" class="form-control btn btn-register" value="Add Now">
+													</div>
+												</div>
+											</div>
+										</form>
+							</div></li>
+
+
+            </div>
+          </div>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading" style="height:60px;">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" >
+                <span style="font-size:30px;">Service allotment</span>
+                </a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse out">
+              <div class="panel-body">
+                <form id="register-form" action="/admin" method="POST" role="form" >
+                    <div class="form-group">
+                      <input type="number" name="orderid3" id="orderid3" tabindex="1" class="form-control" placeholder="Order_ID" value="">
+                    </div>
+                    <div class="form-group">
+                      <input type="number" name="empid" id="empid" tabindex="1" class="form-control" placeholder="Employee_ID" value="">
+                    </div>
+                    <div class="form-group">
+											<div class="checkbox-inline">
+      										<label><input type="checkbox" name="v1-123" id='v1-123' >Vehicle_1</label>
+    									</div>
+									    <div class="checkbox-inline">
+									      	<label><input type="checkbox" name="v2-167" id='v2-167' >Vehicle_2</label>
+									    </div>
+											<div class="checkbox-inline">
+									      	<label><input type="checkbox" name="v3-216" id='v3-216' >Vehicle_3</label>
+									    </div><div class="checkbox-inline">
+									      	<label><input type="checkbox" name="v4-879" id='v4-879' >Vehicle_4</label>
+									    </div><div class="checkbox-inline">
+									      	<label><input type="checkbox" name="v5-656" id='v5-656' >Vehicle_5</label>
+									    </div>
+											<br/>
+											<label for='date'>Expected date of delivery :<br/>
+											<div class="form-group">
+	                      <input type="date" name="date" id="date" tabindex="1" class="form-control" placeholder="Date" style="width:1100px;" value="">
+	                    </div>
+											<label for='date'>Expected time of delivery :<br/>
+											<div class="form-group">
+	                      <input type="time" name="time" id="time" tabindex="1" class="form-control" placeholder="Time" style="width:1100px;" value="">
+	                    </div>
+                      <!--<input type="text" name="vehicleid" id="vehicleid" tabindex="1" class="form-control" placeholder="Vehicle_ID">-->
+                    </div>
+                    <div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit3" id="register-submit3" tabindex="4" class="form-control btn btn-register" value="Add Now">
+                        <input type="reset" style="width:300px;" class="btn btn-info" name="register-reset" id="register-reset" tabindex="4" class="form-control btn btn-register" value="Clear">
+											</div>
+										</div>
+									</div>
+              </form>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-default">
+          <div class="panel-heading" style="height:60px;">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" >
+              <span style="font-size:30px;">Add Employee</span>
+              </a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse out">
+            <div class="panel-body">
+              <form id="register-form" action="/admin" method="POST" role="form" >
+                  <div class="form-group">
+                    <input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value=""/>
+                  </div>
+									<div class="form-group">
+                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value=""/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="contact" id="contact" tabindex="1" class="form-control" placeholder="Contact Number" value=""/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="address" id="address" tabindex="1" class="form-control" placeholder="Address"/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="salary4" id="salary4" tabindex="1" class="form-control" placeholder="Salary"/>
+                  </div>
+                  <div class="form-group">
+                    <input type="date" name="date" id="date" tabindex="1" class="form-control" placeholder="Date of hiring"/>
+                  </div>
+                  <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                      <input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit4" id="register-submit4" tabindex="4" class="form-control btn btn-register" value="Add Now">
+                      <input type="reset" style="width:300px;" class="btn btn-info" name="register-reset" id="register-reset" tabindex="4" class="form-control btn btn-register" value="Clear">
+                    </div>
+                  </div>
+                </div>
+            </form>
+            </div>
+        </div>
+
+
+
+
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading" style="height:60px;">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" >
+            <span style="font-size:30px;">Add vehicle details</span>
+            </a>
+          </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse out">
+          <div class="panel-body">
+            <form id="register-form" action="/admin" method="POST" role="form" >
+                <div class="form-group">
+                  <input type="text" name="regno" id="regno" tabindex="1" class="form-control" placeholder="Registration No." value="">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="npi" id="npi" tabindex="1" class="form-control" placeholder="No Plate Info." value="">
+                </div>
+                <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-3">
+                    <input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit5" id="register-submit5" tabindex="4" class="form-control btn btn-register" value="Add Now">
+                    <input type="reset" style="width:300px;" class="btn btn-info" name="register-reset" id="register-reset" tabindex="4" class="form-control btn btn-register" value="Clear">
+                  </div>
+                </div>
+              </div>
+          </form>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading" style="height:60px;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse14" >
+          <span style="font-size:30px;">Add Sanitary Item dealer</span>
+          </a>
+        </h4>
+      </div>
+      <div id="collapse14" class="panel-collapse collapse out">
+        <div class="panel-body">
+          <form id="register-form" action="/admin" method="POST" role="form" >
+              <div class="form-group">
+                <input type="text" name="dname" id="dname" tabindex="1" class="form-control" placeholder="Dealer_name" value=""/>
+              </div>
+							<div class="form-group">
+                <input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email"/>
+              </div>
+              <div class="form-group">
+                <input type="text" name="contact" id="contact" tabindex="1" class="form-control" placeholder="Contact Number" maxlength="10"/>
+              </div>
+              <div class="form-group">
+                <input type="text" name="address" id="Address" tabindex="1" class="form-control" placeholder="Address"/>
+              </div>
+
+              <div class="form-group">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <input type="submit" style="width:300px;" class="btn btn-primary" name="dsubmit1" id="register-submit14" tabindex="4" class="form-control btn btn-register" value="Add Now">
+                  <input type="reset" style="width:300px;" class="btn btn-info" name="register-reset" id="register-reset" tabindex="4" class="form-control btn btn-register" value="Clear">
+                </div>
+              </div>
+            </div>
+        </form>
+        </div>
+    </div>
+  </div>
+
+
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading" style="height:60px;">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse15" >
+				<span style="font-size:30px;">Add Building Material dealer</span>
+				</a>
+			</h4>
+		</div>
+		<div id="collapse15" class="panel-collapse collapse out">
+			<div class="panel-body">
+				<form id="register-form" action="/admin" method="POST" role="form" >
+						<div class="form-group">
+							<input type="text" name="dname1" id="dname" tabindex="1" class="form-control" placeholder="Dealer_name" value=""/>
+						</div>
+						<div class="form-group">
+							<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email"/>
+						</div>
+						<div class="form-group">
+							<input type="text" name="contact" id="contact" tabindex="1" class="form-control" placeholder="Contact Number" maxlength="10"/>
+						</div>
+						<div class="form-group">
+							<input type="text" name="address" id="Address" tabindex="1" class="form-control" placeholder="Address"/>
+						</div>
+
+						<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" style="width:300px;" class="btn btn-primary" name="dsubmit2" id="register-submit15" tabindex="4" class="form-control btn btn-register" value="Add Now">
+								<input type="reset" style="width:300px;" class="btn btn-info" name="register-reset" id="register-reset" tabindex="4" class="form-control btn btn-register" value="Clear">
+							</div>
+						</div>
+					</div>
+			</form>
+			</div>
+	</div>
+</div>
+
+
+
+<div class="panel panel-default">
+	<div class="panel-heading" style="height:60px;">
+		<h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapse32" >
+			<span style="font-size:30px;">Sanitary Ware Items and others</span>
+			</a>
+		</h4>
+	</div>
+	<div id="collapse32" class="panel-collapse collapse out">
+		<div class="panel-body"><strong>
+
+
+		<table style="border:1px solid black; ">
+			<tr>
+				<th>&nbsp; &#x261B; &nbsp;<u>Item_ID</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Item_name</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Cost</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Current_Stock</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Threshold</u></th>
+			</tr>
+			{%if task6%}
+			{% for item in task6 %}
+			<tr>
+				<th><u>{{item[0]}}</u></th>
+				<th><u>{{item[1]}}</u></th>
+				<th><u>{{item[2]}}</u></th>
+				<th><u>{{item[3]}}</u></th>
+				<th><u>{{item[4]}}</u></th>
+			</tr>
+			{%endfor%}
+			{%endif%}
+		</table>
+		</strong></div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading" style="height:60px;">
+		<h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapse31" >
+			<span style="font-size:30px;">Building Material</span>
+			</a>
+		</h4>
+	</div>
+	<div id="collapse31" class="panel-collapse collapse out">
+		<div class="panel-body"><strong>
+
+
+		<table style="border:1px solid black; ">
+			<tr>
+				<th>&nbsp; &#x261B; &nbsp;<u>Item_ID</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Item_name</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Cost</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Current_Stock</u></th>
+				<th>&nbsp; &#x261B; &nbsp;<u>Threshold</u></th>
+			</tr>
+			{%if task7%}
+			{% for item in task7 %}
+			<tr>
+				<th><u>{{item[0]}}</u></th>
+				<th><u>{{item[1]}}</u></th>
+				<th><u>{{item[2]}}</u></th>
+				<th><u>{{item[3]}}</u></th>
+				<th><u>{{item[4]}}</u></th>
+			</tr>
+			{%endfor%}
+			{%endif%}
+		</table>
+		</strong></div>
+	</div>
+</div>
+
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading" style="height:60px;">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" >
+        <span style="font-size:30px;">Add new sanitary items</span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse out">
+      <div class="panel-body">
+        <form id="register-form" action="/admin" method="POST" role="form" >
+            <div class="form-group">
+              <input type="text" name="itemname1" id="itemname" tabindex="1" class="form-control" placeholder="Product Name" value="">
+            </div>
+            <div class="form-group">
+              <input type="text" name="cost" id="Cost" tabindex="1" class="form-control" placeholder="Cost" value="">
+            </div>
+            <div class="form-group">
+              <input type="text" name="currentstock" id="currentstock" tabindex="1" class="form-control" placeholder="Current_Stock" value="">
+            </div>
+            <div class="form-group">
+              <input type="text" name="threshold" id="Threshold" tabindex="1" class="form-control" placeholder="Threshold" value="">
+            </div>
+            <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit6" id="register-submit6" tabindex="4" class="form-control btn btn-register" value="Add Now">
+                <input type="reset" style="width:300px;" class="btn btn-info" name="register-reset" id="register-reset" tabindex="4" class="form-control btn btn-register" value="Clear">
+              </div>
+            </div>
+          </div>
+      </form>
+      </div>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading" style="height:60px;">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" >
+      <span style="font-size:30px;">Add new building material products</span>
+      </a>
+    </h4>
+  </div>
+  <div id="collapse7" class="panel-collapse collapse out">
+    <div class="panel-body">
+      <form id="register-form" action="/admin" method="POST" role="form" >
+          <div class="form-group">
+            <input type="text" name="itemname2" id="itemname2" tabindex="1" class="form-control" placeholder="Product Name" value="">
+          </div>
+          <div class="form-group">
+            <input type="text" name="purchasecost" id="purchasecost" tabindex="1" class="form-control" placeholder="Purchase_cost" value="">
+          </div>
+          <div class="form-group">
+            <input type="text" name="currentstock" id="currentstock" tabindex="1" class="form-control" placeholder="Current_Stock" value="">
+          </div>
+          <div class="form-group">
+            <input type="text" name="threshold" id="Threshold" tabindex="1" class="form-control" placeholder="Threshold" value="">
+          </div>
+          <div class="form-group">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit7" id="register-submit7" tabindex="4" class="form-control btn btn-register" value="Add Now">
+              <input type="reset" style="width:300px;" class="btn btn-info" name="register-reset" id="register-reset" tabindex="4" class="form-control btn btn-register" value="Clear">
+            </div>
+          </div>
+        </div>
+    </form>
+    </div>
+</div>
+</div>
+
+								<div class="panel panel-default">
+								  <div class="panel-heading" style="height:60px;">
+								    <h4 class="panel-title">
+								      <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" >
+								      <span style="font-size:30px;">Update the Sanitary items</span>
+								      </a>
+								    </h4>
+								  </div>
+								  <div id="collapse8" class="panel-collapse collapse out">
+								    <div class="panel-body">
+								        <ul>
+								        <li><button class="btn btn-success" data-toggle="collapse" data-target="#demo">Edit Item</button>
+								        <div id="demo" class="collapse">
+								              <form id="register-form" action="/admin" method="POST" role="form" >
+								                  <div class="form-group">
+								                    <input type="text" name="itemid1" id="itemid" tabindex="1" class="form-control" placeholder="Item_ID" value="">
+								                  </div>
+								                  <div class="form-group">
+								                    <input type="text" name="currentstock1" id="currentstock" tabindex="1" class="form-control" placeholder="Current_Stock" value="">
+								                  </div>
+								                  <div class="form-group">
+								                  <div class="row">
+								                    <div class="col-sm-6 col-sm-offset-3">
+								                      <input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit1_1" id="register-submit1_1" tabindex="4" class="form-control btn btn-register" value="Add Now">
+								                    </div>
+								                  </div>
+								                </div>
+								              </form>
+								        </div></li>
+
+								        <li><button class="btn btn-danger" data-toggle="collapse" data-target="#demo2">Delete Item</button>
+								        <div id="demo2" class="collapse">
+								          <form id="register-form" action="/admin" method="POST" role="form" >
+								              <div class="form-group">
+								                <input type="text" name="itemid01" id="itemid" tabindex="1" class="form-control" placeholder="Item_ID" value="">
+								              </div>
+
+								              <div class="form-group">
+								              <div class="row">
+								                <div class="col-sm-6 col-sm-offset-3">
+								                  <input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit1_2" id="register-submit1_2" tabindex="4" class="form-control btn btn-register" value="Delete">
+								                </div>
+								              </div>
+								            </div>
+								          </form>
+								      </div></li>
+
+								      </ul>
+
+								    </div>
+								</div>
+							</div>
+
+
+
+
+							<div class="panel panel-default">
+								<div class="panel-heading" style="height:60px;">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse10" >
+										<span style="font-size:30px;">Update the building material informaton</span>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse10" class="panel-collapse collapse out">
+									<div class="panel-body">
+											<ul>
+											<li><button class="btn btn-success" data-toggle="collapse" data-target="#demo3">Edit Item</button>
+											<div id="demo3" class="collapse">
+														<form id="register-form" action="/admin" method="POST" role="form" >
+																<div class="form-group">
+																	<input type="text" name="itemid2" id="itemid" tabindex="1" class="form-control" placeholder="Item_ID" value="">
+																</div>
+																<div class="form-group">
+																	<input type="text" name="currentstock2" id="currentstock" tabindex="1" class="form-control" placeholder="Current_Stock" value="">
+																</div>
+																<div class="form-group">
+																<div class="row">
+																	<div class="col-sm-6 col-sm-offset-3">
+																		<input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit2_1" id="register-submit2_1" tabindex="4" class="form-control btn btn-register" value="Add Now">
+																	</div>
+																</div>
+															</div>
+														</form>
+											</div></li>
+
+											<li><button class="btn btn-danger" data-toggle="collapse" data-target="#demo4">Delete Item</button>
+											<div id="demo4" class="collapse">
+												<form id="register-form" action="/admin" method="POST" role="form" >
+														<div class="form-group">
+															<input type="text" name="itemid02" id="itemid02" tabindex="1" class="form-control" placeholder="Item_ID" value="">
+														</div>
+
+														<div class="form-group">
+														<div class="row">
+															<div class="col-sm-6 col-sm-offset-3">
+																<input type="submit" style="width:300px;" class="btn btn-primary" name="register-submit2_2" id="register-submit2_2" tabindex="4" class="form-control btn btn-register" value="Delete">
+															</div>
+														</div>
+													</div>
+												</form>
+										</div></li>
+
+										</ul>
+
+									</div>
+							</div>
+						</div>
+
+
+
+
+  </div>
+</div>
+</section>
+
+
+<!--
+
+<div class="container" style="background-image:url('/static/images/bcg1.jpg');width=960px;border:2px black solid;border-radius:5px;margin-top:8px;">
+
+
+
+				<div class="row" style="background-image:url('/static/images/bcg11.jpg');clear:left;border:red solid 2px;color:black;text-align:center;">
+					<div class="parallax">
+						 <div class="col-lg-12">
+							<h2>WE OFFER A COMPLETE LINE OF BUILDING MATERIALS.</h2>
+							<h2>CALL US TODAY!  954-327-3465</h2> <h2>Free Quote! Sign Up Now! <a href="/signup">click here</a></h2>
+							<p style="font-size:16px;">We stock a wide range of sanitary ware and building materials at all of our facilities which enables you to get the product you need when you want it.</p>
+							<hr>
+						</div>
+					</div>
+
+	</div>
+
+	<footer class="container" style="width:960px;background-image:url('/static/images/bcg2.jpg');border:2px solid green;margin:auto 135px;">
+			<br/>
+			<strong>
+
+
+			<table>
+				<tr>
+					<th>&nbsp; &#x261B; &nbsp;<u>Enterprise-</u></th>
+					<th>&nbsp; &#x261B; &nbsp;<u>Our Products-</u></th>
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Home</a></td>
+					<td>Sanitary Ware Items-</td>
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">About Us</a></td>
+					<td>Building Materials-</td>
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Services</a></td>
+
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Contact Us</a></td>
+
+				</tr>
+				<tr>
+					<td><a href="#" style="color:black;">Our Products</a></td>
+				</tr>
+			</table>
+
+			<hr>
+			<p align="center">Terms of Service</p>
+			<p align="center">&copy; 2015 All Rights Reserved</p>
+
+			</strong>
+	</footer> -->
+		<!--*********script************-->
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8FAGHLQtciNp42eXfe8PZwWTILnLVcWg&callback=myMap"></script>
+
+
+
+	</body>
+</html>

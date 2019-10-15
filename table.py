@@ -1,5 +1,6 @@
 from MySQLdb import connect
 
+#make tables function
 def maketables():
     try:
         print("ererere")
